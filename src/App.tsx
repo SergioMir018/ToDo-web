@@ -1,5 +1,7 @@
 import React from "react"
 import Header from './components/shared/Header';
+import Home from "./components/Home/Home";
+import Footer from "./components/shared/Footer";
 
 function App() {
 
@@ -8,6 +10,8 @@ function App() {
     <nav>
       <div className="min-h-screen">
         <Header />
+        <Home />
+        <Footer />
       </div>
     </nav>
     </>
