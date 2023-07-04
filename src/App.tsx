@@ -6,13 +6,13 @@ function App() {
 
   return (
     <>
-    <nav>
-      <div className="min-h-screen">
-        <Header />
-        <Home />
-        <Footer />
-      </div>
-    </nav>
+      <main className="relative">
+        <div className="min-h-screen overflow-y-hidden">
+          <Header />
+          <Home />
+          <Footer />
+        </div>
+      </main>
     </>
   )
 }

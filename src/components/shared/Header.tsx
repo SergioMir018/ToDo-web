@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header className='font-belanosima text-xl text-white'>
-      <ul className='flex justify-center bg-[#202026] py-4'>
+      <ul className='flex justify-end bg-[#202026] gap-2 py-4 pr-4'>
         <li className='hover:bg-slate-700 hover:transition duration-150 rounded-lg'>
           <a href="#" className='py-1 px-2 '>Home</a>
         </li>
