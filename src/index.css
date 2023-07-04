@@ -7,4 +7,19 @@
   html {
     @apply bg-[#24262e]
   }
+  
+  @font-face {
+    font-family: 'Belanosima-Regular';
+    src: url('../public/fonts/Belanosima-Regular.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Belanosima-Bold';
+    src: url('../public/fonts/Belanosima-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Belanosima-SemiBold';
+    src: url('../public/fonts/Belanosima-SemiBold.ttf');
+  }
 }

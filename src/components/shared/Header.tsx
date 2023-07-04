@@ -1,8 +1,6 @@
-import React from 'react'
-
 const Header = () => {
   return (
-    <header className='text-lg text-white'>
+    <header className='font-belanosima text-xl text-white'>
       <ul className='flex justify-center bg-[#202026] py-4'>
         <li className='hover:bg-slate-700 hover:transition duration-150 rounded-lg'>
           <a href="#" className='py-1 px-2 '>Home</a>
