@@ -24,14 +24,14 @@ const Home = () => {
       </div>
       <section className="flex items-center gap-4">
         <h2 className="text-white font-belanosima text-xl">Are you <strong className="bg-gradient-to-r text-transparent   bg-clip-text from-indigo-500 via-purple-500 to-pink-500">new</strong> ?</h2>
-        <div className="py-1 px-3 rounded-lg border-2 group hover:bg-slate-50 transition duration-150">
-          <a href="#" className="text-white font-belanosima-semibold group-hover:text-black transition duration-150">
+        <div className="py-1 px-3 cursor-pointer select-none rounded-lg border-2 group active:border-purple-500 active:bg-gray-700 hover:bg-slate-50 transition duration-150">
+          <a href="#" className="text-white font-belanosima-semibold group-hover:text-black transition duration-150  group-active:text-white">
             <strong>Register</strong>
           </a>
         </div>
         <span className="text-white font-belanosima text-lg"> or </span>
-        <div className="py-1 px-3 rounded-lg border-2 group hover:bg-slate-50 transition duration-150">
-          <a href="#" className="text-white font-belanosima-semibold group-hover:text-black transition duration-150">
+        <div className="py-1 px-3 cursor-pointer select-none rounded-lg border-2 group active:border-purple-500 active:bg-gray-700 hover:bg-slate-50 transition duration-150">
+          <a href="#" className="text-white font-belanosima-semibold group-hover:text-black transition duration-150 group-active:text-white">
             <strong>Sing in</strong>
           </a>
         </div>
