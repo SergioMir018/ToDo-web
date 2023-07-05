@@ -11,15 +11,12 @@
   @font-face {
     font-family: 'Belanosima-Regular';
     src: url('/fonts/Belanosima-Regular.woff2') format("woff2");
-  }
-  
-  @font-face {
-    font-family: 'Belanosima-Bold';
-    src: url('/fonts/Belanosima-Bold.woff2') format("woff2");
+    font-display: swap;
   }
   
   @font-face {
     font-family: 'Belanosima-SemiBold';
     src: url('/fonts/Belanosima-SemiBold.woff2') format("woff2");
+    font-display: swap;
   }
 }
