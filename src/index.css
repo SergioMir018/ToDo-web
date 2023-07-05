@@ -10,16 +10,16 @@
   
   @font-face {
     font-family: 'Belanosima-Regular';
-    src: url('../public/fonts/Belanosima-Regular.woff2');
+    src: url('../public/fonts/Belanosima-Regular.woff2') format("woff2");
   }
   
   @font-face {
     font-family: 'Belanosima-Bold';
-    src: url('../public/fonts/Belanosima-Bold.woff2');
+    src: url('../public/fonts/Belanosima-Bold.woff2') format("woff2");
   }
   
   @font-face {
     font-family: 'Belanosima-SemiBold';
-    src: url('../public/fonts/Belanosima-SemiBold.woff2');
+    src: url('../public/fonts/Belanosima-SemiBold.woff2') format("woff2");
   }
 }
