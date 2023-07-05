@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: 'https://sergiomir018.github.io/ToDo-web/',
+  server: {
+    port: 3000
+  }
 })
