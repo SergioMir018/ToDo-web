@@ -23,9 +23,9 @@ Filter tasks by status (completed / incomplete / all).
 
 The ToDo Web application uses the following technologies:
 
-React: a JavaScript library for building user interfaces.
-Vite: a build tool and development server for web applications.
-Tailwind CSS: a CSS framework for designing user interfaces.
+- React: a JavaScript library for building user interfaces.
+- Vite: a build tool and development server for web applications.
+- Tailwind CSS: a CSS framework for designing user interfaces.
 
 ## Contribution
 
