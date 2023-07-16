@@ -9,7 +9,6 @@ function App() {
       <main className="relative">
         <div className="min-h-screen overflow-y-hidden">
           <Header />
-          <Home />
           <Footer />
         </div>
       </main>

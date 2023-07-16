@@ -1,4 +1,4 @@
-const Home = () => {
+function Home() {
   return (
     <article className="flex flex-col items-center">
       <h1 className="text-7xl mb-5 mt-8 text-white font-belanosima-semibold">Welcome to this <span className="bg-gradient-to-r text-transparent bg-clip-text from-indigo-500 via-purple-500 to-pink-500 animate-pulse animate-infinite animate-duration-[5000ms] animate-ease-in animate-alternate animate-fill-backwards">ToDo</span> app</h1>
@@ -36,7 +36,6 @@ const Home = () => {
           </a>
         </div>
       </section>
-
     </article>
   )
 }

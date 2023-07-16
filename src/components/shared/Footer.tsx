@@ -1,4 +1,4 @@
-const Footer = () => {
+function Footer() {
   return (
     <footer className='absolute bottom-0 left-0 w-full text-white bg-[#202026] py-10'>
       <div className="w-full flex justify-center">
