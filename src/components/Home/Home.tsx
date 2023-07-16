@@ -5,7 +5,7 @@ function Home() {
     <article className="flex flex-col items-center">
       <h1 className="text-7xl mb-5 mt-8 text-white font-belanosima-semibold">Welcome to this <span className="bg-gradient-to-r text-transparent bg-clip-text from-indigo-500 via-purple-500 to-pink-500 animate-pulse animate-infinite animate-duration-[5000ms] animate-ease-in animate-alternate animate-fill-backwards">ToDo</span> app</h1>
       <div className="flex mt-4 py-5">
-        <img src="./images/6926528.webp" width="384" height="384" alt="An images that resembles the process of organizing a project" className="max-h-96 shadow-2xl shadow-slate-900 translate-x-24 rounded-xl z-10 animate-fade-right animate-once animate-duration-[1200ms]" />
+        <img src="/images/6926528.webp" width="384" height="384" alt="An images that resembles the process of organizing a project" className="max-h-96 shadow-2xl shadow-slate-900 translate-x-24 rounded-xl z-10 animate-fade-right animate-once animate-duration-[1200ms]" />
         <ul className="-translate-y-6 -translate-x-36">
           <li className="pl-80 bg-slate-600 p-2 rounded-lg pt-6 pb-2 mb-3 text-center animate-fade-left animate-once animate-duration-[1200ms] animate-delay-200">
             <p className="font-belanosima text-xl text-white -translate-y-2 -translate-x-32">
