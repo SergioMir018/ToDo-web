@@ -1,6 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Register  from '../Register/Register';
-import SingIn from '../Register/SingIn';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (

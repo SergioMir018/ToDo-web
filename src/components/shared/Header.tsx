@@ -1,6 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import Home from '../Home/Home';
-import Profile from '../Register/Profile';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
