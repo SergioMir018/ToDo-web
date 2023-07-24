@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-export default function Register() {
+export default function SingUp() {
   return (
     <section className="text-white flex items-center flex-col mt-32">
-      <h1 className="text-5xl font-belanosima-semibold">Register</h1>
+      <h1 className="text-5xl font-belanosima-semibold">Sing Up</h1>
       <input type="text" 
       className="register-inputs" 
       placeholder="name..." />

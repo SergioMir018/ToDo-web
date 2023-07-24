@@ -9,9 +9,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Register from "./components/Register/Register";
-import SingIn from "./components/Register/SingIn";
 import Profile from "./components/Register/Profile";
+import SingUp from "./components/Register/SingUp";
+import LogIn from "./components/Register/LogIn";
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
             <Routes>
               <Route path="/ToDo-web/*" element={<HeaderFooterController />}>
                 <Route index element={<Home />} />
-                <Route path="register" element={<Register />} />
-                <Route path="sing-in" element={<SingIn />} />
+                <Route path="sing-up" element={<SingUp />} />
+                <Route path="log-in" element={<LogIn />} />
                 <Route path="profile" element={<Profile />} />
               </Route>
             </Routes>
