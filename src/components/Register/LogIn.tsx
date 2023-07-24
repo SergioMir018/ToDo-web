@@ -11,7 +11,7 @@ export default function LogIn() {
         placeholder="password"
       />
       <Link
-        to="/ToDo-web/sing-in"
+        to="/ToDo-web/to-do"
         className="mt-4 py-1 px-3 cursor-pointer select-none rounded-lg border-2 active:border-purple-500 active:bg-gray-700 hover:bg-slate-50 text-white font-belanosima-semibold hover:text-black active:text-white transition duration-150"
       >
         Confirm

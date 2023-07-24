@@ -12,6 +12,7 @@ import Home from "./components/Home/Home";
 import Profile from "./components/Register/Profile";
 import SingUp from "./components/Register/SingUp";
 import LogIn from "./components/Register/LogIn";
+import ToDo from "./components/ToDo/ToDo";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="sing-up" element={<SingUp />} />
                 <Route path="log-in" element={<LogIn />} />
                 <Route path="profile" element={<Profile />} />
+                <Route path="to-do" element={<ToDo />} />
               </Route>
             </Routes>
           </div>
