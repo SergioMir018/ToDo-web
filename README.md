@@ -6,10 +6,10 @@ This is a sample project for a ToDo web application developed with React and Vit
 
 To run the application, follow these steps:
 
-Clone the repository on your local machine.
-Install dependencies with npm install.
-Run the application with npm run dev.
-Open the application in your browser at <http://localhost:3000>.
+- Clone the repository on your local machine.
+- Install dependencies with ```npm install```.
+- Run the application with ```npm run dev```.
+- Open the application in your browser at <http://localhost:3000>.
 
 ## Features
 
