@@ -7,10 +7,6 @@
   html {
     @apply bg-[#24262e]
   }
-
-  .input {
-    @apply font-belanosima
-  }
   
   @font-face {
     font-family: 'Belanosima-Regular';
@@ -22,5 +18,11 @@
     font-family: 'Belanosima-SemiBold';
     src: url('/fonts/Belanosima-SemiBold.woff2') format("woff2");
     font-display: swap;
+  }
+}
+
+@layer components {
+  .register-inputs {
+    @apply font-belanosima mt-4 bg-transparent w-[16rem] p-2 border-2 border-dashed border-slate-600 rounded-md outline-none focus:border-white focus:border-solid  transition duration-150
   }
 }
