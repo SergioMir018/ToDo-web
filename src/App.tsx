@@ -39,8 +39,8 @@ function App() {
 
     useEffect(() => {
       const isRegisterOrSignInRoute =
-        location.pathname.includes("/register") ||
-        location.pathname.includes("/sing-in");
+        location.pathname.includes("/sing-up") ||
+        location.pathname.includes("/log-in");
       setHideHeaderFooter(isRegisterOrSignInRoute);
     }, [location]);
 
