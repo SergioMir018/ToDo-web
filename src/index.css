@@ -7,6 +7,10 @@
   html {
     @apply bg-[#24262e]
   }
+
+  .input {
+    @apply font-belanosima
+  }
   
   @font-face {
     font-family: 'Belanosima-Regular';
