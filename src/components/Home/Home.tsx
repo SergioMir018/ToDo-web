@@ -34,7 +34,7 @@ function Home() {
           <span className="text-white font-belanosima text-lg"> or </span>
           <div className="py-1 px-3 cursor-pointer select-none rounded-lg border-2 group active:border-purple-500 active:bg-gray-700 hover:bg-slate-50 transition duration-150">
             <Link to="/ToDo-web/sing-in" className="text-white font-belanosima-semibold group-hover:text-black transition duration-150 group-active:text-white">
-              <strong>Sing in</strong>
+              <strong>Sing up</strong>
             </Link>
           </div>
       </section>
