@@ -13,7 +13,7 @@ export default function ToDo() {
   return (
     <section className="text-white flex">
       <TaskBar newTask={setNewTask} />
-      <NewTask />
+      {newTask && <NewTask savedTask={setNewTask} />}
     </section>
   );
 }
