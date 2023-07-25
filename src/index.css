@@ -25,4 +25,8 @@
   .register-inputs {
     @apply font-belanosima mt-4 bg-transparent w-[16rem] p-2 border-2 border-dashed border-slate-600 rounded-md outline-none focus:border-white focus:border-solid  transition duration-150
   }
+
+  .task-inputs {
+    @apply font-belanosima bg-transparent w-[16rem] p-2 border-2 border-dashed border-slate-600 rounded-md outline-none focus:border-white focus:border-solid  transition duration-150
+  }
 }
