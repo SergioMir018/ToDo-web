@@ -11,9 +11,9 @@ export default function ToDo() {
   }, [newTask]);
 
   return (
-    <section className="text-white">
+    <section className="text-white flex">
       <TaskBar newTask={setNewTask} />
-      {newTask && <NewTask />}
+      <NewTask />
     </section>
   );
 }
