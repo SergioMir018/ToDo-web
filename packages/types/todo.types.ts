@@ -1,11 +1,11 @@
-export type ToDo =  {
+export type TodoTask =  {
   id: string,
   title: string,
   description: string,
-  childrenTasks?: Array<ToDo>
+  childrenTasks?: Array<TodoTask>
 }
 
 export type UserToDo = {
   id: string,
-  userTasks: Array<ToDo>
+  userTasks: Array<TodoTask>
 }
