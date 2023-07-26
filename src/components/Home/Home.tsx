@@ -16,17 +16,17 @@ function Home() {
           width="384"
           height="384"
           alt="An images that resembles the process of organizing a project"
-          className="max-h-96 shadow-2xl shadow-slate-900 translate-x-24 rounded-xl z-10 animate-fade-right animate-once animate-duration-[1200ms]"
+          className="max-h-96 shadow-2xl shadow-slate-900 translate-x-24 rounded-xl z-10 animate-fade-right animate-once animate-duration-[500ms]"
         />
         <ul className="-translate-y-6 -translate-x-36">
-          <li className="pl-80 bg-slate-600 p-2 rounded-lg pt-6 pb-2 mb-3 text-center animate-fade-left animate-once animate-duration-[1200ms] animate-delay-200">
+          <li className="pl-80 bg-slate-600 p-2 rounded-lg pt-6 pb-2 mb-3 text-center animate-fade-left animate-once animate-duration-[500ms] animate-delay-100">
             <p className="font-belanosima text-xl text-white -translate-y-2 -translate-x-32">
               This is a <span className="text-sky-500">To-Do app</span>. Here
               you can register the <br /> tasks that you have pending to do and
               mark their <br /> completion once they are done.
             </p>
           </li>
-          <li className="pl-80 bg-slate-600 py-4 rounded-lg mb-3 text-center animate-fade-left animate-once animate-duration-[1200ms] animate-delay-300">
+          <li className="pl-80 bg-slate-600 py-4 rounded-lg mb-3 text-center animate-fade-left animate-once animate-duration-[500ms] animate-delay-200">
             <p className="font-belanosima text-xl text-white -translate-x-32">
               <span className="text-sky-500">
                 Don't let your to-do list overwhelm you
@@ -38,7 +38,7 @@ function Home() {
               the way.
             </p>
           </li>
-          <li className="pl-80 bg-slate-600 pt-2 pb-7 rounded-lg text-center animate-fade-left animate-once animate-duration-[1200ms] animate-delay-500">
+          <li className="pl-80 bg-slate-600 pt-2 pb-7 rounded-lg text-center animate-fade-left animate-once animate-duration-[500ms] animate-delay-300">
             <p className="font-belanosima text-xl text-white -translate-x-32 translate-y-2">
               <span className="text-sky-500">Simplify your life</span> with our
               to-do app. Say goodbye <br /> to cluttered notebooks and sticky
