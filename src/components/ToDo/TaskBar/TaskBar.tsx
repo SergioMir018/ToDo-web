@@ -2,6 +2,7 @@ import { useState } from "react";
 import {ReactComponent as MySvg}  from "../../../../public/AddCircle.svg";
 
 import { UserToDo } from "../../../../packages/types/todo.types";
+import Task from "../Task/Task";
 
 const mocktodos: UserToDo = {
   id: "mocktodos",
@@ -47,7 +48,7 @@ export default function TaskBar({ newTask }: Props) {
       </button>
       <div className="flex flex-col ml-[2rem]  mt-4">
         {mocktodos.userTasks.map((task) => {
-          return <h1>{task.title}</h1>;
+          return <Task task={task} />
         })}
       </div>
       <style>
