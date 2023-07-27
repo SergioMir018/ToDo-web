@@ -46,7 +46,7 @@ export default function TaskBar({ newTask }: Props) {
         />
         Add task
       </button>
-      <div className="flex flex-col ml-[2rem]  mt-4">
+      <div className="flex flex-col gap-3   mx-[2rem] mt-4">
         {mocktodos.userTasks.map((task) => {
           return <Task task={task} />
         })}
