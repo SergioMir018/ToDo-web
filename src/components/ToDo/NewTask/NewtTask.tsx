@@ -1,10 +1,13 @@
 import { useState } from "react";
 
+import { ReactComponent as Close } from "../../../../public/Close.svg"
+
 type Props = {
   savedTask: (task: boolean) => void;
+  closeNewTask: (task: boolean) => void;
 };
 
-export default function NewTask({ savedTask }: Props) {
+export default function NewTask({ savedTask, closeNewTask }: Props) {
   const [description, setDescription] = useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -16,7 +19,12 @@ export default function NewTask({ savedTask }: Props) {
 
   return (
     <section className="text-white mt-[5rem] ml-[4rem] h-[47rem] rounded-xl w-[40rem] border">
-      <h1 className="mt-[2rem] font-belanosima-semibold  inline-block ml-[40%] text-4xl">
+      <div className="z-10 flex justify-end">
+        <button onClick={() => closeNewTask(false)}>
+          <Close fill="white" />
+        </button>
+      </div>
+      <h1 className="-mt-[1rem] font-belanosima-semibold flex justify-center text-4xl">
         New Task
       </h1>
       <form
@@ -38,8 +46,10 @@ export default function NewTask({ savedTask }: Props) {
             />
           </li>
         </ul>
-        <button className="ml-[40%] mt-[1rem] w-[6rem] py-1 select-none rounded-lg border-2 active:border-purple-500 active:bg-gray-700 hover:bg-slate-50 text-white font-belanosima-semibold hover:text-black active:text-white  transition duration-150"
-        onClick={() => savedTask(false)}>
+        <button
+          className="ml-[40%] mt-[1rem] w-[6rem] py-1 select-none rounded-lg border-2 active:border-purple-500 active:bg-gray-700 hover:bg-slate-50 text-white font-belanosima-semibold hover:text-black active:text-white  transition duration-150"
+          onClick={() => savedTask(false)}
+        >
           Save Task
         </button>
       </form>

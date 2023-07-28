@@ -18,7 +18,7 @@ export default function ToDo() {
   return (
     <section className="text-white flex">
       <TaskBar newTask={setNewTask} showTask={setTask} setTitle={setTaskTitle} />
-      {newTask && <NewTask savedTask={setNewTask} />}
+      {newTask && <NewTask savedTask={setNewTask} closeNewTask={setNewTask} />}
       {task && <ToDoTask closeTask={setTask} setCardInfo={taskTitle} />}
     </section>
   );

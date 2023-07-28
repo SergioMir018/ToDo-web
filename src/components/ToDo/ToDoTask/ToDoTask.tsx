@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactComponent as Close } from '../../../../public/Close.svg'
 
 type Props = {
   closeTask: (value: boolean) => void,
@@ -7,11 +7,25 @@ type Props = {
 
 export default function ToDoTask({ closeTask, setCardInfo }: Props) {
   return (
-    <section className="text-white mt-[5rem] ml-[4rem] h-[47rem] rounded-xl w-[40rem] border">
-      <h1 className=''>
+    <section className="mt-[5rem] ml-[4rem] h-[47rem] rounded-xl w-[40rem] border">
+      <div className="z-10 flex justify-end">
+        <button onClick={() => closeTask(false)}>
+          <Close fill="white" />
+        </button>
+      </div>
+      <h1 className="-mt-[1rem] font-belanosima-semibold flex justify-center text-4xl">
         {setCardInfo[0]}
       </h1>
-      <p>{setCardInfo[1]}</p>
+      <h2 className="ml-[2rem] mt-[2rem] font-belanosima text-3xl">
+        Task description:
+      </h2>
+      {/* <p>{setCardInfo[1]}</p> */}
+      <p className="mx-[3rem] text-justify mt-2 font-belanosima text-lg">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quis
+        voluptas cum rerum ipsum, blanditiis dignissimos in dolores fugit esse
+        laudantium voluptatum facilis consectetur quisquam, sit eos, labore
+        distinctio et.
+      </p>
     </section>
   );
 }

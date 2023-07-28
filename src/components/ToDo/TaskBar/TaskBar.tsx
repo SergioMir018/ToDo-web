@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {ReactComponent as MySvg}  from "../../../../public/AddCircle.svg";
+import {ReactComponent as AddTask}  from "../../../../public/AddCircle.svg";
 
 import { UserToDo } from "../../../../packages/types/todo.types";
 import Task from "../Task/Task";
@@ -42,7 +42,7 @@ export default function TaskBar({ newTask, showTask, setTitle }: Props) {
         onMouseDown={() => setIsClicked(true)}
         onMouseUp={() => setIsClicked(false)}
       >
-        <MySvg
+        <AddTask
           fill={isClicked ? "white" : isHovered ? "black" : "white"}
           height={30}
         />
