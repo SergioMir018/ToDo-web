@@ -1,13 +1,15 @@
 import { TodoTask } from '../../../../packages/types/todo.types'
 
 type Props = {
-  task: TodoTask
+  task: TodoTask,
+  isClicked: (showCard: boolean) => void
 }
 
-export default function Task({ task }: Props) {
+export default function Task({ task, isClicked }: Props) {
   return (
-    <section className='border-2 flex justify-center py-1 rounded-md font-belanosima hover:bg-white hover:text-black transition duration-150 cursor-pointer text-lg'>
+    <button className='border-2 flex justify-center py-1 rounded-md font-belanosima hover:bg-white hover:text-black transition duration-150 cursor-pointer text-lg'
+    onClick={() => isClicked(true)}>
       {task.title}
-    </section>
+    </button>
   )
 }

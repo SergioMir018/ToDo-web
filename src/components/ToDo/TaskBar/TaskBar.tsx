@@ -29,6 +29,7 @@ export default function TaskBar({ newTask }: Props) {
 
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [task, setTask] = useState(false);
 
   return (
     <section className="bg-slate-600 w-[18rem] h-[45rem] mt-[6rem] ml-4 flex rounded-md flex-col">
@@ -48,7 +49,7 @@ export default function TaskBar({ newTask }: Props) {
       </button>
       <div className="flex flex-col gap-3   mx-[2rem] mt-4">
         {mocktodos.userTasks.map((task) => {
-          return <Task task={task} />
+          return <Task task={task} isClicked={setTask} />
         })}
       </div>
       <style>
