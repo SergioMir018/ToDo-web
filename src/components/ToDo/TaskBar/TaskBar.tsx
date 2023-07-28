@@ -24,7 +24,7 @@ const mocktodos: UserToDo = {
 interface Props {
   newTask: (task: boolean) => void,
   showTask: (selectedTask: boolean) => void,
-  setTitle: (task: string) => void
+  setTitle: (task: string[]) => void
 }
 
 export default function TaskBar({ newTask, showTask, setTitle }: Props) {
