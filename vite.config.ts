@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(), svgr()],
   base: 'https://sergiomir018.github.io/ToDo-web/',
   server: {
-    port: 3000
+    port: 3001
   }
 })
