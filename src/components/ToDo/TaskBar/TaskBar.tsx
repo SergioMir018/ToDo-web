@@ -24,9 +24,10 @@ const mocktodos: UserToDo = {
 interface Props {
   newTask: (task: boolean) => void,
   showTask: (selectedTask: boolean) => void,
+  setTitle: (task: string) => void
 }
 
-export default function TaskBar({ newTask, showTask }: Props) {
+export default function TaskBar({ newTask, showTask, setTitle }: Props) {
 
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -49,7 +50,7 @@ export default function TaskBar({ newTask, showTask }: Props) {
       </button>
       <div className="flex flex-col gap-3   mx-[2rem] mt-4">
         {mocktodos.userTasks.map((task) => {
-          return <Task task={task} isClicked={showTask} />
+          return <Task task={task} isClicked={showTask} setTaskTitle={setTitle} />
         })}
       </div>
       <style>

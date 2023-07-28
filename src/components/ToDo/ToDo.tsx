@@ -8,6 +8,7 @@ export default function ToDo() {
   
   const [newTask, setNewTask] = useState(false);
   const [task, setTask] = useState(false);
+  const [taskTitle, setTaskTitle] = useState('');
 
   useEffect(() => {
     console.log(task);
@@ -16,9 +17,9 @@ export default function ToDo() {
 
   return (
     <section className="text-white flex">
-      <TaskBar newTask={setNewTask} showTask={setTask} />
+      <TaskBar newTask={setNewTask} showTask={setTask} setTitle={setTaskTitle} />
       {newTask && <NewTask savedTask={setNewTask} />}
-      {task && <ToDoTask closeTask={setTask} />}
+      {task && <ToDoTask closeTask={setTask} setCardTitle={taskTitle} />}
     </section>
   );
 }
