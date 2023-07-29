@@ -18,7 +18,7 @@ export default function NewTask({ savedTask, closeNewTask }: Props) {
   };
 
   return (
-    <section className="text-white mt-[5rem] ml-[4rem] h-[47rem] rounded-xl w-[40rem] border">
+    <section className="text-white mt-[5rem] ml-[4rem] h-[45.5rem] rounded-xl w-[40rem] border">
       <div className="z-10 flex justify-end">
         <button onClick={() => closeNewTask(false)}>
           <Close fill="white" />

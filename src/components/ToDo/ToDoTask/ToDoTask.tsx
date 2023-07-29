@@ -7,7 +7,7 @@ type Props = {
 
 export default function ToDoTask({ closeTask, setCardInfo }: Props) {
   return (
-    <section className="mt-[5rem] ml-[4rem] h-[47rem] rounded-xl w-[40rem] border">
+    <section className="mt-[5rem] ml-[4rem] h-[45.5rem] rounded-xl w-[40rem] border">
       <div className="z-10 flex justify-end">
         <button onClick={() => closeTask(false)}>
           <Close fill="white" />
