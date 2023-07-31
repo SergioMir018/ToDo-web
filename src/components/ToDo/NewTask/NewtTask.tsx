@@ -29,7 +29,7 @@ export default function NewTask({ savedTask, closeNewTask, todos, setTodos }: Pr
 
   const handleSaveTask = useCallback(() => {
 
-    if ( title != null ) {
+    if ( title !== "" ) {
       const newTask: TodoTask = {
         id: "fgsdf",
         title,
