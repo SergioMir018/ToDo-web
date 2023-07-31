@@ -13,7 +13,6 @@ type Props = {
 export default function NewTask({ savedTask, closeNewTask, todos, setTodos }: Props) {
   const [description, setDescription] = useState("");
   const [title, setTitle] = useState("");
-  const [submitStatus, setSubmitStatus] = useState(true);
 
   const { userTasks } = todos;
 
