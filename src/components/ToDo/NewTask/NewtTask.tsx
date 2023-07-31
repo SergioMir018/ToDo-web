@@ -40,6 +40,8 @@ export default function NewTask({ savedTask, closeNewTask, todos, setTodos }: Pr
       setTodos({
         userTasks: [...userTasks, newTask]
       });
+
+      savedTask(false);
     }
   }, [userTasks, title, description])
 
