@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { type UserToDo,type UserToDosList } from "../../../packages/types/todo.types";
 
@@ -18,7 +18,7 @@ const mocktodos: UserToDo = {
       id: "mocktodos",
       title: "mockt",
       description: "mocktodos2",
-    },
+    }
   ],
 };
 
@@ -28,6 +28,8 @@ export default function ToDo() {
   const [task, setTask] = useState(false);
   const [taskTitle, setTaskTitle] = useState<string[]>(["",""]);
   const [todos, setTodos] = useState<UserToDosList>(mocktodos);
+
+  useEffect(() => {}, [mocktodos.userTasks])
   
   return (
     <section className="text-white flex">

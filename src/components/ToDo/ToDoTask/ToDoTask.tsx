@@ -21,10 +21,7 @@ export default function ToDoTask({ closeTask, setCardInfo }: Props) {
       </h2>
       {/* <p>{setCardInfo[1]}</p> */}
       <p className="mx-[3rem] text-justify mt-2 font-belanosima text-lg">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quis
-        voluptas cum rerum ipsum, blanditiis dignissimos in dolores fugit esse
-        laudantium voluptatum facilis consectetur quisquam, sit eos, labore
-        distinctio et.
+        {setCardInfo[1]}
       </p>
     </section>
   );

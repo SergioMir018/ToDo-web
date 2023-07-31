@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import { ReactComponent as Close } from "../../../../public/Close.svg"
-import { type UserToDosList } from '../../../../packages/types/todo.types';
+import { TodoTask, type UserToDosList } from '../../../../packages/types/todo.types';
 
 type Props = {
   savedTask: (task: boolean) => void,
@@ -10,21 +10,38 @@ type Props = {
   setTodos: (todos: UserToDosList) => void,
 };
 
-export default function NewTask({ savedTask, closeNewTask, todos , setTodos }: Props) {
+export default function NewTask({ savedTask, closeNewTask, todos, setTodos }: Props) {
   const [description, setDescription] = useState("");
+  const [title, setTitle] = useState("");
   const [submitStatus, setSubmitStatus] = useState(true);
 
   const { userTasks } = todos;
 
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value);
+  }
+
+  const handleDescriptionChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const textarea = event.target;
     textarea.style.height = "auto";
     textarea.style.height = `${textarea.scrollHeight}px`;
     setDescription(event.target.value);
   };
 
-  const handleSaveTask = () => {
-  }
+  const handleSaveTask = useCallback(() => {
+
+    if ( title != null ) {
+      const newTask: TodoTask = {
+        id: "fgsdf",
+        title,
+        description
+      }
+
+      setTodos({
+        userTasks: [...userTasks, newTask]
+      });
+    }
+  }, [userTasks, title, description])
 
   return (
     <section className="text-white mt-[5rem] ml-[4rem] h-[45.5rem] rounded-xl w-[40rem] border">
@@ -44,36 +61,27 @@ export default function NewTask({ savedTask, closeNewTask, todos , setTodos }: P
         <ul>
           <li className="flex items-center">
             <label className="mr-2 text-2xl">Title:</label>
-            <input type="text" className="task-inputs" />
+            <input name="title" value={title} onChange={handleTitleChange}  type="text" className="task-inputs" />
           </li>
           <li className="mt-10 ml-14">
             <textarea
+              name="description"
               className="task-inputs w-[28rem] resize-none overflow-hidden"
               rows={1}
               value={description}
-              onChange={handleChange}
+              onChange={handleDescriptionChange}
               placeholder="Description..."
             />
           </li>
         </ul>
-        <button
-          className="ml-[40%] mt-[1rem] w-[6rem] py-1 select-none rounded-lg border-2 active:border-purple-500 active:bg-gray-700 hover:bg-slate-50 text-white font-belanosima-semibold hover:text-black active:text-white  transition duration-150"
-          type="submit"
-          onClick={() => {
-            //submitStatus && savedTask(false)
-
-            // setTodos([...userTasks,{
-            //   id: todos.id,
-            //   title: "newTodo",
-            //   description: "lorem ipsum dolor sit amet, consect"
-            // }]);
-
-            console.log(todos.userTasks)
-          }}
-        >
-          Save Task
-        </button>
       </form>
+      <button
+        className="ml-[40%] mt-[1rem] w-[6rem] py-1 select-none rounded-lg border-2 active:border-purple-500 active:bg-gray-700 hover:bg-slate-50 text-white font-belanosima-semibold hover:text-black active:text-white  transition duration-150"
+        type="submit"
+        onClick={handleSaveTask}
+      >
+        Save Task
+      </button>
     </section>
   );
 }
