@@ -21,7 +21,7 @@ export default function ToDoTask({ closeTask, setCardInfo }: Props) {
       </h2>
       {/* <p>{setCardInfo[1]}</p> */}
       <p className="mx-[3rem] text-justify mt-2 font-belanosima text-lg">
-        {setCardInfo[1]}
+        {(setCardInfo[1] === "") ? "No description" : setCardInfo[1]}
       </p>
     </section>
   );
