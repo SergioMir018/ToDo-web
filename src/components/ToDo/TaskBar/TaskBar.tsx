@@ -4,30 +4,14 @@ import {ReactComponent as AddTask}  from "../../../../public/AddCircle.svg";
 import { UserToDo } from "../../../../packages/types/todo.types";
 import Task from "../Task/Task";
 
-const mocktodos: UserToDo = {
-  id: "mocktodos",
-  userTasks: [
-    {
-      id: "mocktodos",
-      title: "mocktodos",
-      description: "mocktodo",
-    },
-    {
-      id: "mocktodos",
-      title: "mockt",
-      description: "mocktodos2",
-    },
-  ],
-};
-
-
 interface Props {
   newTask: (task: boolean) => void,
   showTask: (selectedTask: boolean) => void,
-  setTitle: (task: string[]) => void
+  setTitle: (task: string[]) => void,
+  todos: UserToDo,
 }
 
-export default function TaskBar({ newTask, showTask, setTitle }: Props) {
+export default function TaskBar({ newTask, showTask, setTitle, todos }: Props) {
 
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -49,7 +33,7 @@ export default function TaskBar({ newTask, showTask, setTitle }: Props) {
         Add task
       </button>
       <div className="flex flex-col gap-3   mx-[2rem] mt-4">
-        {mocktodos.userTasks.map((task) => {
+        {todos.userTasks.map((task) => {
           return <Task task={task} isClicked={showTask} setTaskTitle={setTitle} />
         })}
       </div>
