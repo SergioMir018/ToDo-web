@@ -1,17 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {ReactComponent as AddTask}  from "../../../../public/AddCircle.svg";
 
-import { UserToDo } from "../../../../packages/types/todo.types";
+import { type UserToDosList } from "../../../../packages/types/todo.types";
 import Task from "../Task/Task";
 
 interface Props {
   newTask: (task: boolean) => void,
   showTask: (selectedTask: boolean) => void,
-  setTitle: (task: string[]) => void,
-  todos: UserToDo,
+  setTitle: (task: string[]) => void
+  todos: UserToDosList
 }
 
 export default function TaskBar({ newTask, showTask, setTitle, todos }: Props) {
+
+  const {userTasks} = todos;
+
+  useEffect(() => {
+    console.log(userTasks.length);
+  }, [userTasks])
 
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -33,8 +39,8 @@ export default function TaskBar({ newTask, showTask, setTitle, todos }: Props) {
         Add task
       </button>
       <div className="flex flex-col gap-3   mx-[2rem] mt-4">
-        {todos.userTasks.map((task) => {
-          return <Task task={task} isClicked={showTask} setTaskTitle={setTitle} />
+        {userTasks.map((task, inx) => {
+          return <Task key={inx} task={task} isClicked={showTask} setTaskTitle={setTitle} />
         })}
       </div>
       <style>

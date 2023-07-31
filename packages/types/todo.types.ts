@@ -9,3 +9,5 @@ export type UserToDo = {
   id: string,
   userTasks: Array<TodoTask>
 }
+
+export type UserToDosList = Pick<UserToDo, "userTasks">

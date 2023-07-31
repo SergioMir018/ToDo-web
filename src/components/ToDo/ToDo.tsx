@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import { UserToDo } from "../../../packages/types/todo.types";
+import { type UserToDo,type UserToDosList } from "../../../packages/types/todo.types";
 
 import TaskBar from "./TaskBar/TaskBar";
 import NewTask from "./NewTask/NewtTask";
@@ -23,15 +23,16 @@ const mocktodos: UserToDo = {
 };
 
 export default function ToDo() {
-  
+
   const [newTask, setNewTask] = useState(false);
   const [task, setTask] = useState(false);
   const [taskTitle, setTaskTitle] = useState<string[]>(["",""]);
-
+  const [todos, setTodos] = useState<UserToDosList>(mocktodos);
+  
   return (
     <section className="text-white flex">
-      <TaskBar newTask={setNewTask} showTask={setTask} setTitle={setTaskTitle} todos={mocktodos} />
-      {newTask && <NewTask savedTask={setNewTask} closeNewTask={setNewTask}  todos={}/>}
+      <TaskBar newTask={setNewTask} showTask={setTask} setTitle={setTaskTitle} todos={todos} />
+      {newTask && <NewTask savedTask={setNewTask} closeNewTask={setNewTask}  todos={todos} setTodos={setTodos}/>}
       {task && <ToDoTask closeTask={setTask} setCardInfo={taskTitle} />}
     </section>
   );

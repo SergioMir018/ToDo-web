@@ -1,17 +1,20 @@
 import { useState } from "react";
 
 import { ReactComponent as Close } from "../../../../public/Close.svg"
-import { UserToDo } from "../../../../packages/types/todo.types";
+import { type UserToDosList } from '../../../../packages/types/todo.types';
 
 type Props = {
   savedTask: (task: boolean) => void,
   closeNewTask: (task: boolean) => void,
-  todos: UserToDo
+  todos: UserToDosList
+  setTodos: (todos: UserToDosList) => void,
 };
 
-export default function NewTask({ savedTask, closeNewTask, todos }: Props) {
+export default function NewTask({ savedTask, closeNewTask, todos , setTodos }: Props) {
   const [description, setDescription] = useState("");
   const [submitStatus, setSubmitStatus] = useState(true);
+
+  const { userTasks } = todos;
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const textarea = event.target;
@@ -58,11 +61,14 @@ export default function NewTask({ savedTask, closeNewTask, todos }: Props) {
           type="submit"
           onClick={() => {
             //submitStatus && savedTask(false)
-            todos.userTasks.push({
-              id: todos.id,
-              title: "newTodo",
-              description: "lorem ipsum dolor sit amet, consect"
-            })
+
+            // setTodos([...userTasks,{
+            //   id: todos.id,
+            //   title: "newTodo",
+            //   description: "lorem ipsum dolor sit amet, consect"
+            // }]);
+
+            console.log(todos.userTasks)
           }}
         >
           Save Task

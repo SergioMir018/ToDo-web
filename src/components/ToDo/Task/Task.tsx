@@ -1,4 +1,4 @@
-import { TodoTask } from "../../../../packages/types/todo.types";
+import { type TodoTask } from "../../../../packages/types/todo.types";
 
 type Props = {
   task: TodoTask;
